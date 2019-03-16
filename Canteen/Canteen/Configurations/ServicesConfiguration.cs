@@ -1,0 +1,26 @@
+﻿using Canteen.Core.Repositories;
+using Canteen.Data.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Canteen.Configurations
+{
+    public static class ServicesConfiguration
+    {
+        public static IServiceCollection AddRepositories(
+            this IServiceCollection services)
+        {
+            services
+                .AddTransient<ICookShopRepository, CookShopRepository>()
+                .AddTransient<ICategoryRepository, CategoryRepository>()
+                .AddTransient<IDishRepository, DishRepository>()
+                .AddTransient<ISizePriceRepository, SizePriceRepository>();
+
+
+            return services;
+        }
+    }
+}
