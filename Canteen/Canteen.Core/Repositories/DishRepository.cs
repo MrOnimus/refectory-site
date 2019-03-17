@@ -1,4 +1,5 @@
 ﻿using Canteen.Core.EF;
+using Canteen.Core.Services;
 using Canteen.Data.Entities;
 using Canteen.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +16,15 @@ namespace Canteen.Core.Repositories
         private readonly CanteenDbContext _context;
         private readonly ISizePriceRepository _repoSP;
         private readonly ICategoryRepository _repoCtg;
+        private readonly IFileLoader _file;
 
-        public DishRepository(CanteenDbContext context, ISizePriceRepository repoSP, ICategoryRepository repoCtg)
+        public DishRepository(CanteenDbContext context, ISizePriceRepository repoSP, ICategoryRepository repoCtg,
+            IFileLoader file)
         {
             _context = context;
             _repoSP = repoSP;
             _repoCtg = repoCtg;
+            _file = file;
         }
 
         public async Task<List<Dish>> GetAllAsync()
@@ -52,6 +56,8 @@ namespace Canteen.Core.Repositories
         }
         public async Task<Dish> CreateAsync(Dish item)
         {
+            item.Id = Guid.Empty;
+            item.Img = await _file.LoadImg(item.Image);
             var result = await _context.Dishes.AddAsync(item);
             await _context.SaveChangesAsync();
             return result.Entity;
@@ -59,6 +65,8 @@ namespace Canteen.Core.Repositories
 
         public async Task<bool> UpdateAsync(Dish item)
         {
+            if (item.Image != null)
+                item.Img = await _file.LoadImg(item.Image);
             _context.Dishes.Update(item);
             await _context.SaveChangesAsync();
             return true;
@@ -70,6 +78,7 @@ namespace Canteen.Core.Repositories
             if (d == null)
                 return false;
             _context.Dishes.Remove(d);
+            await _context.SaveChangesAsync();
             return true;
         }  
     }

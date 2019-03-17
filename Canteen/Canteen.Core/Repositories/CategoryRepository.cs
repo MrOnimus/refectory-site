@@ -36,6 +36,7 @@ namespace Canteen.Core.Repositories
         }
         public async Task<Category> CreateAsync(Category item)
         {
+            item.Id = Guid.Empty;
             var result = await _context.Categories.AddAsync(item);
             await _context.SaveChangesAsync();
             return result.Entity;

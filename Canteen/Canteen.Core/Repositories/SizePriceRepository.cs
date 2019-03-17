@@ -35,6 +35,7 @@ namespace Canteen.Core.Repositories
         }
         public async Task<SizePrice> CreateAsync(SizePrice item)
         {
+            item.Id = Guid.Empty;
             var result = await _context.SizePrice.AddAsync(item);
             await _context.SaveChangesAsync();
             return result.Entity;
@@ -65,6 +66,7 @@ namespace Canteen.Core.Repositories
             if (sp == null)
                 return false;
             _context.SizePrice.Remove(sp);
+            await _context.SaveChangesAsync();
             return true;
         }        
     }

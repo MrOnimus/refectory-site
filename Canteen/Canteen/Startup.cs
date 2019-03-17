@@ -27,6 +27,7 @@ namespace Canteen
             services
                 .AddConnectionProvider(Configuration)
                 .AddRepositories()
+                .AddServices()
                 .AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

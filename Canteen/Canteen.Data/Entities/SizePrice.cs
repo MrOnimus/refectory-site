@@ -11,7 +11,7 @@ namespace Canteen.Data.Entities
         [Required]
         public int Size { get; set; }
         [Required]
-        public double Price { get; set; }
+        public int Price { get; set; }
         [Required]
         public Guid DishId { get; set; }
     }

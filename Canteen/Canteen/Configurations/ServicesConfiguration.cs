@@ -1,4 +1,5 @@
 ﻿using Canteen.Core.Repositories;
+using Canteen.Core.Services;
 using Canteen.Data.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,6 +19,16 @@ namespace Canteen.Configurations
                 .AddTransient<ICategoryRepository, CategoryRepository>()
                 .AddTransient<IDishRepository, DishRepository>()
                 .AddTransient<ISizePriceRepository, SizePriceRepository>();
+
+
+            return services;
+        }
+
+        public static IServiceCollection AddServices(
+            this IServiceCollection services)
+        {
+            services
+                .AddTransient<IFileLoader, FileLoader>();
 
 
             return services;

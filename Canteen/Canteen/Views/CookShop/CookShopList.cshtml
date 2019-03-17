@@ -1,0 +1,6 @@
+﻿@model  List<CookShop>
+
+@foreach(CookShop item in Model)
+{
+    <li id="@item.Id"><a href="#">@item.Title</a></li>
+}
