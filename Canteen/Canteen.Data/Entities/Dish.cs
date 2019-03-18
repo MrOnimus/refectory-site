@@ -10,14 +10,14 @@ namespace Canteen.Data.Entities
     public class Dish
     {
         public Guid Id { get; set; }
-        [Required]
+        [Required] // обязательный параметр
         public string Title { get; set; }
         [Required]
         public string Img { get; set; }
-        [NotMapped]
+        [NotMapped] // аналогично с классом CookShop
         public IFormFile Image { get; set; }
         [Required]
-        public Guid CategoryId { get; set; }
+        public Guid CategoryId { get; set; } // связь один ко многим
         [Required]
         public int Calorie { get; set; }
         [Required]
@@ -27,6 +27,6 @@ namespace Canteen.Data.Entities
         [Required]
         public int Carbohydrate { get; set; }
 
-        public List<SizePrice> SizePrice { get; set; }
+        public List<SizePrice> SizePrice { get; set; } = new List<SizePrice>(); // связь один ко многим
     }
 }

@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 
 namespace Canteen.Controllers
 {
-    public class CategoryController: Controller
-    {
+    public class CategoryController: Controller // контроллер, который получает данные из репозитория 
+    {                                           // и передает их в частичное представление(т.е. методы возвращают кусок )
+                                                // html кода, который мы вставляем с помощью js в соотв. блоки
         private readonly ICategoryRepository _repo;
 
-        public CategoryController(ICategoryRepository repo)
+        public CategoryController(ICategoryRepository repo) // механизм внедрения зависимостей
         {
             _repo = repo;
         }
 
-        public async Task<IActionResult> CategoriesList()
-        {
+        public async Task<IActionResult> CategoriesList(Guid id) // вернет список категорий для определенной столовой 
+        {                                                           // для бокового меню
             try
             {
-                return PartialView("CategoryList", await _repo.GetAllAsync());
+                return PartialView("CategoryList", await _repo.GetByCookShopAsync(id));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex);
+                return StatusCode(500, ex); // в случае ошибки код 500 и текст ошибки
             }
         }
     }

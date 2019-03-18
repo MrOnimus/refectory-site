@@ -11,18 +11,16 @@ using System.Threading.Tasks;
 
 namespace Canteen.Core.Repositories
 {
-    public class DishRepository : IDishRepository
+    public class DishRepository : IDishRepository // тут все аналогично репозиторию категории и кукшоп
     {
         private readonly CanteenDbContext _context;
-        private readonly ISizePriceRepository _repoSP;
         private readonly ICategoryRepository _repoCtg;
         private readonly IFileLoader _file;
 
-        public DishRepository(CanteenDbContext context, ISizePriceRepository repoSP, ICategoryRepository repoCtg,
+        public DishRepository(CanteenDbContext context, ICategoryRepository repoCtg,
             IFileLoader file)
         {
             _context = context;
-            _repoSP = repoSP;
             _repoCtg = repoCtg;
             _file = file;
         }
@@ -39,7 +37,7 @@ namespace Canteen.Core.Repositories
 
         public async Task<List<Dish>> GetByCategoryAsync(Guid id)
         {
-            return await _context.Dishes.Where(x => x.CategoryId == id).ToListAsync();
+            return await _context.Dishes.Include(d => d.SizePrice).Where(x => x.CategoryId == id).ToListAsync();
         }
 
         public async Task<List<Dish>> GetByCookShopAsync(Guid id)

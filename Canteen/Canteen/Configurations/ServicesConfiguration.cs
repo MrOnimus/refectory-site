@@ -11,7 +11,7 @@ namespace Canteen.Configurations
 {
     public static class ServicesConfiguration
     {
-        public static IServiceCollection AddRepositories(
+        public static IServiceCollection AddRepositories( //вынесли подключение репозиториев (для удобства)
             this IServiceCollection services)
         {
             services
@@ -24,7 +24,7 @@ namespace Canteen.Configurations
             return services;
         }
 
-        public static IServiceCollection AddServices(
+        public static IServiceCollection AddServices( //вынесли подключение репозиториев (для удобства)
             this IServiceCollection services)
         {
             services

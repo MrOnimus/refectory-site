@@ -7,11 +7,11 @@ using System.Text;
 
 namespace Canteen.Data.Entities
 {
-    public class CookShop
+    public class CookShop // класс столовой
     {
         public Guid Id { get; set; }
-        [Required]
-        [MaxLength(50)]
+        [Required] // обязательный параметр 
+        [MaxLength(50)] // максимальная длина 50
         public string Title { get; set; }
         [Required]
         public string StartTime { get; set; }
@@ -19,8 +19,9 @@ namespace Canteen.Data.Entities
         public string CloseTime { get; set; }
         [Required]
         public string Img { get; set; }
-        [NotMapped]
-        public IFormFile Image { get; set; }
-        public List<Category> Categories { get; set; } = new List<Category>();
+        [NotMapped] // это поле не будет занесено в БД, оно используется для передачи файла изображения в контроллер
+        public IFormFile Image { get; set; } // само же изображение храниться как путь на изображение в фйловой системе
+                                                // в поле Img
+        public List<Category> Categories { get; set; } = new List<Category>(); // связь один ко многим
     }
 }

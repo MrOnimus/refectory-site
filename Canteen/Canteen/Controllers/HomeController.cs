@@ -10,7 +10,7 @@ using Canteen.Data.Entities;
 
 namespace Canteen.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller // контроллер, который надо бы удалить, его в начале проекта сделал для тестов
     {
         private readonly ICookShopRepository _repo;
 

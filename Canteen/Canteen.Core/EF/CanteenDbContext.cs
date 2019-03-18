@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Canteen.Core.EF
 {
-    public class CanteenDbContext: DbContext
+    public class CanteenDbContext: DbContext // добавляем контекст работы с бд (нужно для entity framework)
     {
         public CanteenDbContext(DbContextOptions<CanteenDbContext> opt) : base(opt)
         {
-            Database.EnsureCreated();
+            Database.EnsureCreated(); // создает автоматически БД, если ее еще нет
         }
 
         public DbSet<CookShop> CookShops { get; set; }

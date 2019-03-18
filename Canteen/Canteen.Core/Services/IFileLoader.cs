@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Canteen.Core.Services
 {
-    public interface IFileLoader
+    public interface IFileLoader // интерфейс для класса, который берет файл изображение и сохраняет его 
     {
         Task<string> LoadImg(IFormFile file);
     }

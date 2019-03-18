@@ -1,8 +1,8 @@
-function getCategoryList() {
+function getCategoryList(id) {
     $.ajax(
         {
             type: 'GET',
-            url: '/category/CategoryList',
+            url: `/category/CategoriesList/${id}`,
             dataType: "html",
             success: function (data, textStatus) {
                 $('#ctgList').html(data);

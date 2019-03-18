@@ -10,3 +10,15 @@ function getCookShopList()
             }
         });
 };
+
+function getCookShopCards() {
+    $.ajax(
+        {
+            type: 'GET',
+            url: '/cookshop/CookShopCards',
+            dataType: "html",
+            success: function (data, textStatus) {
+                $('#content').html(data);
+            }
+        });
+};

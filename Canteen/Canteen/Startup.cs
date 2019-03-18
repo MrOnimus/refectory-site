@@ -25,14 +25,14 @@ namespace Canteen
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddConnectionProvider(Configuration)
-                .AddRepositories()
-                .AddServices()
+                .AddConnectionProvider(Configuration) // см. Configurations
+                .AddRepositories()   // см. Configurations
+                .AddServices()     // см. Configurations
                 .AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env) // стандартная часть
         {
             if (env.IsDevelopment())
             {

@@ -45,3 +45,5 @@ D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Dish\Edit
 D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\Admin\SizePrice\CreateSizePrice.g.cshtml.cs
 D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\Admin\SizePrice\DishInfo.g.cshtml.cs
 D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\Admin\SizePrice\EditSizePrice.g.cshtml.cs
+D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\CookShop\CookShopCards.g.cshtml.cs
+D:\Beta2.2.8\Canteen\Canteen\obj\Debug\netcoreapp2.1\Razor\Views\Dish\DishesList.g.cshtml.cs

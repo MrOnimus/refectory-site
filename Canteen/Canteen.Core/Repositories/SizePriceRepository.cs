@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Canteen.Core.Repositories
 {
-    public class SizePriceRepository : ISizePriceRepository
+    public class SizePriceRepository : ISizePriceRepository // тут все аналогично репозиторию категории и кукшоп
     {
         private readonly CanteenDbContext _context;
 

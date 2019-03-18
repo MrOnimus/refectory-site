@@ -10,26 +10,24 @@ using System.Threading.Tasks;
 
 namespace Canteen.Controllers
 {
-    public class AdminController: Controller
+    public class AdminController: Controller //контроллер админки (по адрессу localhost:5000/admin)
     {
         private readonly ICookShopRepository _repoCS;
         private readonly ICategoryRepository _repoCtg;
         private readonly IDishRepository _repoD;
         private readonly ISizePriceRepository _repoSP;
-        private readonly IHostingEnvironment _env;
 
         public AdminController(ICookShopRepository repoCS, ICategoryRepository repoCtg,
-            IDishRepository repoD, ISizePriceRepository repoSP, IHostingEnvironment env)
+            IDishRepository repoD, ISizePriceRepository repoSP) // механизм внедрения зависимостей
         {
             _repoCS = repoCS;
             _repoCtg = repoCtg;
             _repoD = repoD;
             _repoSP = repoSP;
-            _env = env;
         }
 
-        public async Task<IActionResult> Index()
-        {
+        public async Task<IActionResult> Index() // берем из репозитория данные о сталовых и возвращаем html код с
+        {                                       // карточками столовых
             try
             {
                 return View("CookShop/Index",await _repoCS.GetAllAsync());
@@ -41,7 +39,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateCookShop()
+        public IActionResult CreateCookShop() // страница для создания столовой 
         {
             try
             {
@@ -49,12 +47,12 @@ namespace Canteen.Controllers
             }
             catch (Exception ex)
             {
-                return View("CookShop/CreateCookShop");
+                return View("CookShop/Index");
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCookShop(CookShop item)
+        public async Task<IActionResult> CreateCookShop(CookShop item) // метод, обрабатывающий форму создания столовой 
         {
             try
             {
@@ -68,7 +66,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditCookShop(Guid id)
+        public async Task<IActionResult> EditCookShop(Guid id) // страница редактирования столовой 
         {
             try
             {
@@ -81,7 +79,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditCookShop(CookShop item)
+        public async Task<IActionResult> EditCookShop(CookShop item) // обрабатывает форму редактирования столовой 
         {
             try
             {
@@ -95,7 +93,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> DeleteCookShop(Guid id)
+        public async Task<IActionResult> DeleteCookShop(Guid id) //удаление столовой
         {
             try
             {
@@ -108,12 +106,12 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> CookShopInfo(Guid id)
+        public async Task<IActionResult> CookShopInfo(Guid id) // страница с карточками категорий для определенной столовой
         {
             try
             {
-                ViewBag.CookShop = _repoCS.GetByIdAsync(id).Result.Title;
-                ViewBag.CookShopId = id;
+                ViewBag.CookShop = _repoCS.GetByIdAsync(id).Result.Title; // сохраним название столовой, чтобы использовать в верстке
+                ViewBag.CookShopId = id; //аналогично для ид
                 return View("Category/CookShopInfo", await _repoCtg.GetByCookShopAsync(id));
             }
             catch (Exception ex)
@@ -124,7 +122,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateCategory(Guid id)
+        public IActionResult CreateCategory(Guid id) //форма создания категории для конкретной столовой
         {
             try
             {
@@ -139,7 +137,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCategory(Category category)
+        public async Task<IActionResult> CreateCategory(Category category) // обработка формы создания категории
         {
             try
             {
@@ -154,7 +152,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditCategory(Guid id)
+        public async Task<IActionResult> EditCategory(Guid id)// форма для редактирования категории
         {
             try
             {
@@ -168,7 +166,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditCategory(Category category)
+        public async Task<IActionResult> EditCategory(Category category)//обработка формы редактирования категории
         {
             try
             {
@@ -182,7 +180,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> DeleteCategory(Guid id)
+        public async Task<IActionResult> DeleteCategory(Guid id) // удаление категории
         {
             try
             {
@@ -196,14 +194,14 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> CategoryInfo(Guid id)
+        public async Task<IActionResult> CategoryInfo(Guid id)// страница с карточками блюд для определенной категории
         {
             try
             {
                 Category category = await _repoCtg.GetByIdAsync(id);
-                ViewBag.Category = category.Title;
-                ViewBag.CookShopId = category.CookShopId;
-                ViewBag.CategoryId = id;
+                ViewBag.Category = category.Title; // передаем в верстку название категории
+                ViewBag.CookShopId = category.CookShopId;// ид столовой
+                ViewBag.CategoryId = id; // и ид категории
                 return View("Dish/CategoryInfo", await _repoD.GetByCategoryAsync(id));
             }
             catch (Exception ex)
@@ -214,7 +212,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateDish(Guid id)
+        public IActionResult CreateDish(Guid id) // форма создания блюда
         {
             try
             {
@@ -228,7 +226,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateDish(Dish dish)
+        public async Task<IActionResult> CreateDish(Dish dish) // обработка формы создания блюда
         {
             try
             {
@@ -242,7 +240,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditDish(Guid id)
+        public async Task<IActionResult> EditDish(Guid id)// редактирование блюда
         {
             try
             {
@@ -256,7 +254,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditDish(Dish dish)
+        public async Task<IActionResult> EditDish(Dish dish)// обработка формы редактирования блюда
         {
             try
             {
@@ -270,7 +268,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> DeleteDish(Guid id)
+        public async Task<IActionResult> DeleteDish(Guid id)// удаление блюда
         {
             try
             {
@@ -284,7 +282,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> DishInfo(Guid id)
+        public async Task<IActionResult> DishInfo(Guid id) // страница с карточками размер/цена для определенного блюда
         {
             try
             {
@@ -302,7 +300,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateSizePrice(Guid id)
+        public IActionResult CreateSizePrice(Guid id)//форма редактирования размер/цена
         {
             try
             {
@@ -316,7 +314,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateSizePrice(SizePrice sp)
+        public async Task<IActionResult> CreateSizePrice(SizePrice sp)// обработка формы редактирования размер/цена
         {
             try
             {
@@ -330,7 +328,7 @@ namespace Canteen.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditSizePrice(Guid id)
+        public async Task<IActionResult> EditSizePrice(Guid id)// форма редактирования размер/цена
         {
             try
             {
@@ -344,7 +342,7 @@ namespace Canteen.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditSizePrice(SizePrice sp)
+        public async Task<IActionResult> EditSizePrice(SizePrice sp)// обработка формы редактирования размер/цена
         {
             try
             {
@@ -358,7 +356,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> DeleteSizePrice(Guid id)
+        public async Task<IActionResult> DeleteSizePrice(Guid id)// удаление размер/цена
         {
             try
             {
