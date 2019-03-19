@@ -72,7 +72,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(71, 1309, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2fbf06c1f994bf38ceaece77f43f01f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9f699952ef842f8828a841f1a2c3e32", async() => {
                 BeginContext(234, 1139, true);
                 WriteLiteral(@"
     <div class=""my-2 text-dark"">
@@ -142,7 +142,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1382, 222, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc6c5e37674a4612b5637d73b114bb92", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fb9ed4a3eba4d5c8820b804a50122c8", async() => {
                 BeginContext(1506, 94, true);
                 WriteLiteral("\r\n    <button class=\"btn btn-outline-secondary btn-block\">\r\n        Вернуться\r\n    </button>\r\n");
                 EndContext();

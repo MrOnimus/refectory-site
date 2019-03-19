@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="col-md-2 col-sm-2 col-xs-2">
-                                <ul class="menu-extra">
+                                <ul class="menu-extra" id="show_cart">
                                     <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
                                 </ul>
                                 <div class="shopping__cart">
@@ -58,7 +58,7 @@
                                         <div class="offsetmenu__close__btn">
                                             <a href="#"><i class="zmdi zmdi-close"></i></a>
                                         </div>
-                                        <div class="shp__cart__wrap">
+                                        <div class="shp__cart__wrap" id="cart_content">
                                             <div class="shp__single__product">
                                                 <div class="shp__pro__thumb">
                                                     <a href="#">
@@ -82,14 +82,17 @@
                                         </div>
                                         <ul class="shoping__total">
                                             <li class="subtotal">Итог:</li>
-                                            <li class="total__price">Стоимость</li>
+                                            <li class="total__price" id="total__price">Стоимость</li>
                                         </ul>
                                         <ul class="shoping__total">
                                             <li class="subtotal">Калории:</li>
-                                            <li class="shp__calories">Количество калорий</li>
+                                            <li class="shp__calories" id="shp__calories">Количество калорий</li>
                                         </ul>
                                         <ul class="shopping__btn">
                                             <li><a href="">Купить</a></li>
+                                        </ul>
+                                        <ul class="shopping__btn">
+                                            <li><a href="#clean_card" id="clean_card">Очистить</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -193,9 +196,11 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/ajax/strings.js"></script>
     <script src="js/ajax/Category.js"></script>
     <script src="js/ajax/CookShop.js"></script>
     <script src="js/ajax/Dish.js"></script>
+    <script src="js/ajax/Cart.js"></script>
     <script src="js/ajax/onStart.js"></script>
     <script src="js/ajax/events.js"></script>
 

@@ -150,7 +150,7 @@ WriteAttributeValue("", 261, i.Img, 261, 6, false);
             WriteLiteral(" (%)</p>\r\n        <div>\r\n            ");
             EndContext();
             BeginContext(594, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3da610b43b84c4b8da986e354109081", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "72219f29d94846fc889737ea0d815392", async() => {
                 BeginContext(688, 100, true);
                 WriteLiteral("\r\n                <button class=\"btn btn-outline-success btn-block\">Подробнее</button>\r\n            ");
                 EndContext();
@@ -187,7 +187,7 @@ WriteAttributeValue("", 261, i.Img, 261, 6, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(806, 194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "465150f8f7f248edbd2970b968dfc961", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49597cadac6742ddb1fd3f9688688393", async() => {
                 BeginContext(900, 96, true);
                 WriteLiteral("\r\n                <button class=\"btn btn-outline-info btn-block\">Изменить</button>\r\n            ");
                 EndContext();
@@ -224,7 +224,7 @@ WriteAttributeValue("", 261, i.Img, 261, 6, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(1014, 197, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49350088a1ef48c9aa2f050676a601ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43a2fc3e15b44d86a0c7b92c55c09c14", async() => {
                 BeginContext(1110, 97, true);
                 WriteLiteral("\r\n                <button class=\"btn btn-outline-danger btn-block\">Удалить</button>\r\n            ");
                 EndContext();
@@ -266,7 +266,7 @@ WriteAttributeValue("", 261, i.Img, 261, 6, false);
 #line default
 #line hidden
             BeginContext(1252, 216, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b306a7c375a4aad95ac510f70cbfedf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1af40cb57e55419db93038b855b428a8", async() => {
                 BeginContext(1367, 97, true);
                 WriteLiteral("\r\n    <button class=\"btn btn-outline-warning btn-block\">\r\n        Добавить блюдо\r\n    </button>\r\n");
                 EndContext();
@@ -303,7 +303,7 @@ WriteAttributeValue("", 261, i.Img, 261, 6, false);
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1470, 215, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5ef78bb1351d4cecbdf553983eea4798", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01169655a89e428fb2373f08c9894b96", async() => {
                 BeginContext(1587, 94, true);
                 WriteLiteral("\r\n    <button class=\"btn btn-outline-secondary btn-block\">\r\n        Вернуться\r\n    </button>\r\n");
                 EndContext();

@@ -100,7 +100,7 @@ using Canteen.Data.Entities;
             WriteLiteral("</h4>\r\n            <div>\r\n                ");
             EndContext();
             BeginContext(359, 210, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc6762327b8b420b9e239bbfad4cda28", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "66e14ed6769e4fecab9087220a002cf0", async() => {
                 BeginContext(457, 108, true);
                 WriteLiteral("\r\n                    <button class=\"btn btn-outline-success btn-block\">Подробнее</button>\r\n                ");
                 EndContext();
@@ -137,7 +137,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(587, 206, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ec375c0f07c4302960ea8ba7f889879", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10969ac58a9640b896394b1a5189165a", async() => {
                 BeginContext(685, 104, true);
                 WriteLiteral("\r\n                    <button class=\"btn btn-outline-info btn-block\">Изменить</button>\r\n                ");
                 EndContext();
@@ -174,7 +174,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(811, 209, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1400b83c5b6944bd9ecf2d238938fb42", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca75d8ba2f5e4b5689628da688711c88", async() => {
                 BeginContext(911, 105, true);
                 WriteLiteral("\r\n                    <button class=\"btn btn-outline-danger btn-block\">Удалить</button>\r\n                ");
                 EndContext();
@@ -216,7 +216,7 @@ using Canteen.Data.Entities;
 #line default
 #line hidden
             BeginContext(1073, 224, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ab4ff8a30be494fbf8281072e15d18a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0da763bca7514202bc4502bba6323d17", async() => {
                 BeginContext(1192, 101, true);
                 WriteLiteral("\r\n    <button class=\"btn btn-outline-warning btn-block\">\r\n        Добавить категорию\r\n    </button>\r\n");
                 EndContext();
@@ -253,7 +253,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1299, 173, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a841757ae334516b0362ee40fb948f3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17b6e2b1fff749d6b5138ea599738463", async() => {
                 BeginContext(1374, 94, true);
                 WriteLiteral("\r\n    <button class=\"btn btn-outline-secondary btn-block\">\r\n        Вернуться\r\n    </button>\r\n");
                 EndContext();

@@ -626,3 +626,9 @@ h3.widget-title-modal {
 .ft__widget {
     padding-top: 15px;
 }
+
+.food_name {
+width: 100px;
+right: 40px;
+position: relative;
+}

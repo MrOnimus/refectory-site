@@ -14,16 +14,28 @@ $('#ctgList').delegate(".ctgListItem", "click", function (e) {
 
 $("#content").delegate('.tabs input', "click", function(e){
     $(`#t_${$(e.target).attr('class')} h2 a span`).attr("id", e.target.id);
-    $(`#price_${$(e.target).attr('class')}`).text($(e.target).attr('value') + ' руб');
+    $(`#t_${$(e.target).attr('class')} h2 a span`).attr("data-price", $(e.target).attr('data-price'));
+    $(`#t_${$(e.target).attr('class')} h2 a span`).attr("data-size", $(e.target).attr('data-size'));
+    $(`#price_${$(e.target).attr('class')}`).text($(e.target).attr('data-price') + ' руб');
 });
 
 $("#content").delegate('.ti-shopping-cart', "click", function(e){
     if(e.target.id !="none"){
-        if(sessionStorage["card"] != undefined)
-            sessionStorage["card"] += `#${e.target.id}`;
-        else
-            sessionStorage["card"] = e.target.id;
-        card.push(e.target.id);
+        addToCart(e);
     }
         
 });
+
+$('#show_cart').click(function(){
+    getCart();
+});
+
+$('#clean_card').click(function(){
+    cleanCart();
+});
+
+$('.shopping__cart').delegate(".close","click", function (e){
+    removeItem($(e.target).attr('data-id'));
+});
+
+
