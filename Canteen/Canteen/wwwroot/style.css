@@ -247,8 +247,9 @@ body {
 #tab_3:checked ~ #txt_3 { display: block; }
 
 .ti-shopping-cart{
-    padding-top: 50px;
-    padding-right: 20px;
+    padding-left: 50px;
+    top: 10px;
+    position: relative;
 }
 
 .price_food {
@@ -256,6 +257,13 @@ body {
     padding-right: 20px;
     padding-top: 20px;
     bottom: 50px;
+}
+
+
+.food_name {
+    width: 80px;
+    right: 65px;
+    position: relative;
 }
 
 /*------------------------------
@@ -625,10 +633,4 @@ h3.widget-title-modal {
 /*футер */
 .ft__widget {
     padding-top: 15px;
-}
-
-.food_name {
-width: 100px;
-right: 40px;
-position: relative;
 }
