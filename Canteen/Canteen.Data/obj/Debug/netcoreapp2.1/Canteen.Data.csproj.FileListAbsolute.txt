@@ -1,0 +1,9 @@
+D:\Beta2.2.8\Canteen\Canteen.Data\bin\Debug\netcoreapp2.1\Canteen.Data.deps.json
+D:\Beta2.2.8\Canteen\Canteen.Data\bin\Debug\netcoreapp2.1\Canteen.Data.dll
+D:\Beta2.2.8\Canteen\Canteen.Data\bin\Debug\netcoreapp2.1\Canteen.Data.pdb
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.csprojAssemblyReference.cache
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.csproj.CoreCompileInputs.cache
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.AssemblyInfoInputs.cache
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.AssemblyInfo.cs
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.dll
+D:\Beta2.2.8\Canteen\Canteen.Data\obj\Debug\netcoreapp2.1\Canteen.Data.pdb

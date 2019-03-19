@@ -1,0 +1,12 @@
+D:\Beta2.2.8\Canteen\Canteen.Core\bin\Debug\netcoreapp2.1\Canteen.Core.deps.json
+D:\Beta2.2.8\Canteen\Canteen.Core\bin\Debug\netcoreapp2.1\Canteen.Core.dll
+D:\Beta2.2.8\Canteen\Canteen.Core\bin\Debug\netcoreapp2.1\Canteen.Core.pdb
+D:\Beta2.2.8\Canteen\Canteen.Core\bin\Debug\netcoreapp2.1\Canteen.Data.dll
+D:\Beta2.2.8\Canteen\Canteen.Core\bin\Debug\netcoreapp2.1\Canteen.Data.pdb
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.csprojAssemblyReference.cache
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.csproj.CoreCompileInputs.cache
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.AssemblyInfoInputs.cache
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.AssemblyInfo.cs
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.csproj.CopyComplete
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.dll
+D:\Beta2.2.8\Canteen\Canteen.Core\obj\Debug\netcoreapp2.1\Canteen.Core.pdb
