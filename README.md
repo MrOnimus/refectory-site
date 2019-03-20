@@ -26,7 +26,7 @@ dotnet run --project Canteen
 - ###### Для работы с базой данных используется Entity Framework Core 2.1(2.2)
 - ###### Для разработки Frontend использовался HTML, CSS, JavaScript
 - ###### Были задействованы Bootstrap v4.3.1, JQuery v3.3.1, ScrollRevealJS
-- ###### Шрифты брались с помощью Google Fonts
+- ###### Шрифты подлючены с помощью Google Fonts, использованы 'Baloo Chettan' и 'Montserrat'.
 - ###### Для изменения содержимого страницы используется технология AJAX
 
 ## Структура проекта
