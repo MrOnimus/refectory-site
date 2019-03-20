@@ -7,7 +7,7 @@
         <div class="product__inner">
             <div class="pro__thumb">
                 <a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#">
-                    <img class="product_image" src="@i.Img" alt="product images">
+                    <img class="product_image" src="@i.Img" alt="product images" style="width: 405px; height:270px">
                 </a>
             </div>
             <div class="product__hover__info">
@@ -23,10 +23,8 @@
             </div>
         </div>
         <div class="product__details">
-            <h1 class="float-left-style food_name">@i.Title</h1>
-            <!--                                                         <h3 class="price">Цена</h3>
-             -->
             <div class="row" id="t_@i.Id">
+                <h1 class="float-left-style food_name">@i.Title</h1>
                 <div class="col-sm-9">
                     <div class="tabs">
                         @foreach (SizePrice j in @i.SizePrice)
@@ -38,16 +36,19 @@
 
                         <br />
                         <br />
-                        <h3 id="price_@i.Id" class="price text-left" style="margin-left: 5%;"></h3>
+                        <h3 id="price_@i.Id" class="price text-left price_under" style="margin-left: 5%;"></h3>
+                        <h2>
+                            <a title="Add TO Cart" href="#buy">
+                                <span id="none" data-img="@i.Img" data-pr="@i.Protein" data-clr="@i.Calorie" data-fat="@i.Fat"
+                                      data-crb="@i.Carbohydrate" data-title="@i.Title" data-price="none" data-size="none"
+                                      class="ti-shopping-cart float-left-style">
+                                    Купить
+                                </span>
+                            </a>
+                        </h2>
                     </div>
                 </div>
-                <h2><a title="Add TO Cart" href="#buy">
-                    <span id="none" data-img="@i.Img" data-pr="@i.Protein" data-clr="@i.Calorie" data-fat="@i.Fat"
-                         data-crb="@i.Carbohydrate" data-title="@i.Title" data-price="none" data-size="none"
-                          class="ti-shopping-cart float-left-style">
-                    Купить
-                    </span></a></h2>
-            </div>
+              </div>
         </div>
     </div>
 </div>

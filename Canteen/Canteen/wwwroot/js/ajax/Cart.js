@@ -44,7 +44,7 @@ function getCart(){
     }
     $('#cart_content').html(cart);
     $('#total__price').html(price + ' руб');
-    $('#shp__calories').html(clr);
+    $('#shp__calories').html(clr + ' ккал');
 }
 
 function removeItem(id){

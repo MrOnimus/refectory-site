@@ -246,9 +246,12 @@ body {
 #tab_2:checked ~ #txt_2,
 #tab_3:checked ~ #txt_3 { display: block; }
 
-.ti-shopping-cart{
+.ti-shopping-cart {
     padding-top: 50px;
     padding-right: 20px;
+    padding-left: 50px;
+    top: 10px;
+    position: relative;
 }
 
 .price_food {
@@ -258,11 +261,16 @@ body {
     bottom: 50px;
 }
 
-/*------------------------------
+.food_name {
+    width: 80px;
+    right: 65px;
+    position: relative;
+}
+
+    /*------------------------------
   06. Быстрый просмотр карточки еды
 --------------------------------*/
-
-#quickview-wrapper {
+    #quickview-wrapper {
     position: relative;
 }
 .modal-dialog.modal__container {
@@ -627,13 +635,11 @@ h3.widget-title-modal {
     padding-top: 15px;
 }
 
-.food_name {
-width: 100px;
-right: 40px;
-position: relative;
-}
-
 .logo{ 
 font-family: 'Baloo Chettan', cursive; 
 font-size: 24px; 
+}
+
+.price_under {
+    position: absolute;
 }
