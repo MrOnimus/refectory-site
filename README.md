@@ -11,7 +11,7 @@
 
 ```bash
 dotnet restore
-dotnet run --project Canteen
+dotnet run
 ```
 ###### Основоной контент сайта станет доступен по адрессу: 
 >  http://localhost:5010/index.html
