@@ -144,7 +144,7 @@ body {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .product-categories-menu {
@@ -207,11 +207,11 @@ body {
 .single__tabs__panel.tab-pane:not(.active) {
     display: none;
 }
-.tabs { 
-    width: 100%; 
-    padding: 0px; 
+.tabs {
+    width: 100%;
+    padding: 0px;
     margin: 0 auto;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 .tabs>input { display:none; }
 .tabs>div {
@@ -223,7 +223,7 @@ body {
     width: 140px;
     transition: 1s;
     z-index: 5;
-    position: absolute; 
+    position: absolute;
 }
 .tabs>label {
     display: inline-block;
@@ -234,7 +234,7 @@ body {
 /*    background-color: #98fc98;
 */    border: 1.5px solid #98fc98;
     cursor: pointer;
-    border-radius: 40px; 
+    border-radius: 40px;
 }
 .tabs>input:checked + label {
     color: black;
@@ -636,9 +636,9 @@ h3.widget-title-modal {
     padding-top: 15px;
 }
 
-.logo{ 
-font-family: 'Baloo Chettan', cursive; 
-font-size: 24px; 
+.logo{
+font-family: 'Baloo Chettan', cursive;
+font-size: 24px;
 }
 
 .price_under {
@@ -646,26 +646,26 @@ font-size: 24px;
 }
 
 /* Анимация лоадера */
-.loader {
-    position: relative;
-    height: 200px;
-    padding: 1em 0;
+.loader{
+  position: relative;
+  height: 200px;
+  padding: 1em 0;
 }
 
-.loader:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
-    width: 150px;
-    border-radius: 10px;
-    border: solid 10px #96B566;
-    transform: translate(-50%, -50%);
+.loader:before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 150px;
+  border-radius: 10px;
+  border: solid 10px #96B566;
+  transform: translate(-50%, -50%);
 }
 
-.loader:after {
-    content: '';
+.loader:after{
+    content:'';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -679,6 +679,11 @@ font-size: 24px;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+  0% { transform: translate(-72.5px,-7.5px); }
+  100% { transform: translate(58.5px,-7.5px); }
 }
 
 @media screen and (max-width: 769px) {

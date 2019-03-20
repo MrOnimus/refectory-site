@@ -25,7 +25,27 @@ $("#content").delegate('.ti-shopping-cart', "click", function(e){//при щел
     if(e.target.id !="none"){
         addToCart(e); //если порция выбрана, то добавляем в корзину
     }
-        
+    
+    let that = $(e.target).closest('.product').find('img'); //.find('data-img');
+    console.log(that);
+    that.clone()
+        .css({
+            'position': 'absolute',
+            'z-index': '11100',
+            top: $(this).offset().top - 250,
+            left: $(this).offset().left - 75,
+            'width': 100,
+            'height': 50,
+        })
+        .appendTo("body")
+        .animate({
+            opacity: 0.05,
+            left: $(".ti-shopping-cart").offset()['left'] + 75,
+            top: $(".ti-shopping-cart").offset()['top'],
+            width: 20
+        }, 1500, function () {
+            $(this).remove();
+        });   
 });
 
 $('#show_cart').click(function(){ //при щелчке по значку корзины справа сверху, показываем актуальное содержимое корзины
@@ -39,30 +59,3 @@ $('#clean_card').click(function(){ //при щелчке на очистить �
 $('.shopping__cart').delegate(".close","click", function (e){ //при нажатие крестика на элементе корзины, удаляем этот элемент из
     removeItem($(e.target).attr('data-id'));                  //корзины
 });
-
-$('#content').delegate(".ti-shopping-cart", "click", function () {
-    var that = $(this).closest('.product_cart').find('img');
-    var that_width = that.width() / 2;
-    var that_height = that.height() / 2;
-
-    that.clone()
-        .css({
-            'position': 'absolute',
-            'z-index': '11100',
-            top: $(this).offset().top - 250,
-            left: $(this).offset().left - 75,
-            'width': that_width,
-            'height': that_height,
-        })
-        .appendTo("body")
-        .animate({
-            opacity: 0.05,
-            left: $(".ti-shopping-cart").offset()['left'],
-            top: $(".ti-shopping-cart").offset()['top'],
-            width: 20
-        }, 5000, function () {
-            $(this).remove();
-        });
-
-});
-
