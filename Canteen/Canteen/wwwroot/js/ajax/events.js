@@ -40,4 +40,29 @@ $('.shopping__cart').delegate(".close","click", function (e){
     removeItem($(e.target).attr('data-id'));
 });
 
+$('#content').delegate(".ti-shopping-cart", "click", function () {
+    var that = $(this).closest('.product_cart').find('img');
+    var that_width = that.width() / 2;
+    var that_height = that.height() / 2;
+
+    that.clone()
+        .css({
+            'position': 'absolute',
+            'z-index': '11100',
+            top: $(this).offset().top - 250,
+            left: $(this).offset().left - 75,
+            'width': that_width,
+            'height': that_height,
+        })
+        .appendTo("body")
+        .animate({
+            opacity: 0.05,
+            left: $(".ti-shopping-cart").offset()['left'],
+            top: $(".ti-shopping-cart").offset()['top'],
+            width: 20
+        }, 5000, function () {
+            $(this).remove();
+        });
+
+});
 

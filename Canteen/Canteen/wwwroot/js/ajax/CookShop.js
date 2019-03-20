@@ -12,6 +12,7 @@ function getCookShopList()
 };
 
 function getCookShopCards() {
+    $('#content').html(getLoader());
     $.ajax(
         {
             type: 'GET',

@@ -20,6 +20,7 @@
     <!-- приятный шрифт -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,6 +34,7 @@
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <div class="logo">
                                     <a href="index.html" id="cs_logo">
+                                        <h3 class="logo">Без тараканoff</h3>
                                     </a>
                                 </div>
                             </div>
@@ -41,8 +43,7 @@
                                     <ul class="main__menu">
                                         <li class="drop">
                                             <a href="">Выбрать столовую</a>
-                                            <ul class="dropdown" id="cslist">
-                                            </ul>
+                                            <ul class="dropdown" id="cslist"></ul>
                                         </li>
                                         <li class="regime"><a name="top" id="cs_time">Режим работы</a></li>
                                     </ul>
@@ -59,7 +60,7 @@
                                             <a href="#"><i class="zmdi zmdi-close"></i></a>
                                         </div>
                                         <div class="shp__cart__wrap" id="cart_content">
-                                            
+
                                         </div>
                                         <ul class="shoping__total">
                                             <li class="subtotal">Итог:</li>
@@ -96,18 +97,17 @@
                                 <h3>Меню</h3>
                             </div>
                             <div class="product-categories-menu basic">
-                                <ul id="ctgList">
-                                </ul>
+                                <ul id="ctgList"></ul>
                             </div>
                         </div>
                     </div>
 
                     <!--                     рандомные (или популярные) блюда
                      -->
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 initial_slider" id="content"> 
-                        
-                        
-                        
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 initial_slider" id="content">
+
+                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 loader"></div>
+
                     </div>
 
 
@@ -177,54 +177,98 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/ajax/strings.js"></script>
-    <script src="js/ajax/Category.js"></script>
-    <script src="js/ajax/CookShop.js"></script>
-    <script src="js/ajax/Dish.js"></script>
-    <script src="js/ajax/Cart.js"></script>
-    <script src="js/ajax/onStart.js"></script>
-    <script src="js/ajax/events.js"></script>
 
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-    <script type="text/javascript">
-
-        let btn = document.getElementsByClassName('categories');
-        let hide = document.querySelector('.initial_slider');
-        let show = document.querySelector('.category_food');
-        let shop_cart = document.querySelector('.shopping__cart__inner');
-        let shop_cart_btn = document.querySelector('.cart__menu');
-        let shop_cart_close = document.querySelector('.offsetmenu__close__btn');
-        let body_overlay = document.querySelector('.body_overlay');
-        let menu_btn = document.querySelector('.menu-title');
-        let menu_categ = document.querySelector('.basic');
-
-        // меняем карусель при нажатии на пункт меню
-
-        for (let i = 0; i < btn.length; i++) {
-            btn[i].addEventListener('click', function () {
-                hide.classList.add('hide');
-                show.classList.add('show');
+        <!-- сразу после подключенияjquery вставляешь скрипты, которые ниже !-->
+        <script type="text/javascript">
+            $(".initial_slider").ready(function () {
+                $(".loader").hide();
             });
-        }
+        </script>
+        <script type="text/javascript">
+            window.sr = ScrollReveal({ reset: true });
+            sr.reveal('.product_cart', { duration: 1200 });
+        </script>
+        <script type="text/javascript">
+            $(".ti-shopping-cart").on("click", function () {
+                var that = $(this).closest('.product_cart').find('img');
+                console.log(that);
+                var that_width = that.width() / 2;
+                var that_height = that.height() / 2;
 
-        //появление корзины
+                that.clone()
+                    .css({
+                        'position': 'absolute',
+                        'z-index': '11100',
+                        top: $(this).offset().top - 250,
+                        left: $(this).offset().left - 75,
+                        'width': that_width,
+                        'height': that_height,
+                    })
+                    .appendTo("body")
+                    .animate({
+                        opacity: 0.05,
+                        left: $(".ti-shopping-cart").offset()['left'],
+                        top: $(".ti-shopping-cart").offset()['top'],
+                        width: 20
+                    }, 5000, function () {
+                        $(this).remove();
+                    });
 
-        $('.cart__menu').on('click', function () {
-            $('.shopping__cart').addClass('shopping__cart__on');
-            $('.body__overlay').addClass('is-visible');
+            });
+        </script>
 
-        });
 
-        $('.offsetmenu__close__btn').on('click', function () {
-            $('.shopping__cart').removeClass('shopping__cart__on');
-            $('.body__overlay').removeClass('is-visible');
-        });
 
-        // всплывающее меню для удобства работы со смартфонов
-        menu_btn.addEventListener('click', function () {
-            menu_categ.classList.toggle('basic');
-        });
+        <script src="js/ajax/strings.js"></script>
+        <script src="js/ajax/Category.js"></script>
+        <script src="js/ajax/CookShop.js"></script>
+        <script src="js/ajax/Dish.js"></script>
+        <script src="js/ajax/Cart.js"></script>
+        <script src="js/ajax/onStart.js"></script>
+        <script src="js/ajax/events.js"></script>
 
-    </script>
-</body>
+
+        <script type="text/javascript">
+
+            let btn = document.getElementsByClassName('categories');
+            let hide = document.querySelector('.initial_slider');
+            let show = document.querySelector('.category_food');
+            let shop_cart = document.querySelector('.shopping__cart__inner');
+            let shop_cart_btn = document.querySelector('.cart__menu');
+            let shop_cart_close = document.querySelector('.offsetmenu__close__btn');
+            let body_overlay = document.querySelector('.body_overlay');
+            let menu_btn = document.querySelector('.menu-title');
+            let menu_categ = document.querySelector('.basic');
+
+            // меняем карусель при нажатии на пункт меню
+
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', function () {
+                    hide.classList.add('hide');
+                    show.classList.add('show');
+                });
+            }
+
+            //появление корзины
+
+            $('.cart__menu').on('click', function () {
+                $('.shopping__cart').addClass('shopping__cart__on');
+                $('.body__overlay').addClass('is-visible');
+
+            });
+
+            $('.offsetmenu__close__btn').on('click', function () {
+                $('.shopping__cart').removeClass('shopping__cart__on');
+                $('.body__overlay').removeClass('is-visible');
+            });
+
+            // всплывающее меню для удобства работы со смартфонов
+            menu_btn.addEventListener('click', function () {
+                menu_categ.classList.toggle('basic');
+            });
+
+        </script>
+    </body>
 </html>

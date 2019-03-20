@@ -252,6 +252,7 @@ body {
     padding-left: 50px;
     top: 10px;
     position: relative;
+    z-index: 3;
 }
 
 .price_food {
@@ -642,4 +643,61 @@ font-size: 24px;
 
 .price_under {
     position: absolute;
+}
+
+/* Анимация лоадера */
+.loader {
+    position: relative;
+    height: 200px;
+    padding: 1em 0;
+}
+
+.loader:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    width: 150px;
+    border-radius: 10px;
+    border: solid 10px #96B566;
+    transform: translate(-50%, -50%);
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    border-radius: 50%;
+    background: #F6FF97;
+    animation-name: loader;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 769px) {
+    .logo {
+        font-family: 'Baloo Chettan', cursive;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1080px) and (min-width: 770px) {
+    .logo {
+        font-family: 'Baloo Chettan', cursive;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1081px) {
+    .logo {
+        font-family: 'Baloo Chettan', cursive;
+        font-size: 30px;
+    }
 }

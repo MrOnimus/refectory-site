@@ -21,5 +21,9 @@ function getCartString(elem, id){
             </div>`;
 };
 
+function getLoader() {
+    return `<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 loader"></div>`;
+}
+
 //cartData[id] = [1, title, img, price, size, clr, pr, crb, fat];
 //                0    1     2     3      4    5   6    7    8е

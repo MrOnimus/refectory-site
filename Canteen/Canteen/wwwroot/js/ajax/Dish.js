@@ -1,4 +1,5 @@
 ﻿function getDishByCookShopCards(id) {
+    $('#content').html(getLoader());
     $.ajax(
         {
             type: 'GET',
@@ -11,6 +12,7 @@
 };
 
 function getDishByCategoryCards(id) {
+    $('#content').html(getLoader());
     $.ajax(
         {
             type: 'GET',
