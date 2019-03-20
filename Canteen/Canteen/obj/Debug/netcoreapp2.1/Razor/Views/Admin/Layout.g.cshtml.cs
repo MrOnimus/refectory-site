@@ -54,7 +54,7 @@ using Canteen.Data.Entities;
             WriteLiteral("<!doctype html>\r\n<!--Мастер страница админки-->\r\n<html>\r\n");
             EndContext();
             BeginContext(57, 380, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43aed81fbe5f4719a07d426ff592ef03", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28c394a97d4b4899877bf3de07858b6c", async() => {
                 BeginContext(63, 367, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"">
@@ -80,7 +80,7 @@ using Canteen.Data.Entities;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(441, 474, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25d29c3202d848c1b59a89317022b37d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0ef08258fbc4381bd079bf75712db96", async() => {
                 BeginContext(447, 374, true);
                 WriteLiteral(@"
 

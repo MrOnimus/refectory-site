@@ -1,4 +1,4 @@
-function getCartString(elem, id){
+function getCartString(elem, id){ //макет html для корзины 
     return `<div class="shp__single__product">
                 <div class="shp__pro__thumb">
                     <a href="#">
@@ -21,7 +21,7 @@ function getCartString(elem, id){
             </div>`;
 };
 
-function getLoader() {
+function getLoader() { // макет лоадера
     return `<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 loader"></div>`;
 }
 

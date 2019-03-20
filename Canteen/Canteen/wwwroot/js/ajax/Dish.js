@@ -1,4 +1,4 @@
-﻿function getDishByCookShopCards(id) {
+﻿function getDishByCookShopCards(id) { //получаем все блюда столовой
     $('#content').html(getLoader());
     $.ajax(
         {
@@ -11,7 +11,7 @@
         });
 };
 
-function getDishByCategoryCards(id) {
+function getDishByCategoryCards(id) { //получаем блюда, в зависимости от категории
     $('#content').html(getLoader());
     $.ajax(
         {

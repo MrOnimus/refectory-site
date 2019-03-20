@@ -38,10 +38,6 @@ namespace Canteen
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
 
             app.UseStaticFiles();
             app.UseCookiePolicy();

@@ -44,7 +44,7 @@ namespace Canteen.Controllers
             }
         }
 
-        public async Task<IActionResult> CookShopInfo(Guid id)
+        public async Task<IActionResult> CookShopInfo(Guid id)//информация о времени работы и работает или нет столовая
         {
             try
             {
